@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function redirectToBrandWebsite() {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const brand = urlParams.get('brand');
+
+            if (brand === 'AD') {
+                window.location.href = 'https://adidasheadphones.com';
+            } else if (brand === 'UE') {
+                window.location.href = 'https://urbanears.com';
+            } else {
+                window.location.href = 'https://marshallheadphones.com';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Redirecting...</h1>
+    <script>
+        redirectToBrandWebsite();
+    </script>
+</body>
+</html>
